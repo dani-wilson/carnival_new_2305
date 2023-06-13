@@ -42,5 +42,7 @@ RSpec.describe Ride do
     expect(@visitor1.spending_money).to eq(8)
     expect(@visitor2.spending_money).to eq(4)
     expect(@visitor3.spending_money).to eq(13)
+    expect(@ride3.rider_log).to be_a(Hash)
+    expect(@ride3.revenue).to eq(2)
   end
 end
