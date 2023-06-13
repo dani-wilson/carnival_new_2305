@@ -16,7 +16,8 @@ class Carnival
       end
       popular_ride[ride] = ride_count
     end
-    popular_ride.max_by {|ride, ride_count| ride_count}
+    most_popularest_ride = popular_ride.max_by {|ride, ride_count| ride_count}
+    return most_popularest_ride[0]
   end
 
   def most_profitable_ride
