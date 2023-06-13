@@ -46,8 +46,7 @@ RSpec.describe Carnival do
     @ride3.board_rider(@visitor3)
     @ride3.board_rider(@visitor3)
 
-    expect(@carnival.most_popular_ride).to eq(@ride3) 
-    #it's returning the correct ride, there's just a minor difference??!?!!!
+    expect(@carnival.most_popular_ride).to eq(@ride3)
   end
 
   it 'can list its most profitable ride' do
