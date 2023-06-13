@@ -16,4 +16,10 @@ RSpec.describe Visitor do
   it 'starts out with no preferences' do
     expect(@visitor1.preferences).to eq([])
   end
+
+  it 'can add a preference' do
+    @visitor1.add_preference(:gentle)
+    @visitor1.add_preference(:thrilling)
+    expect(@visitor1.preferences).to eq([:gentle, :thrilling])
+  end
 end
