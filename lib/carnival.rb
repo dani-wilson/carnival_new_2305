@@ -6,4 +6,8 @@ class Carnival
     @duration = duration
     @rides = rides
   end
+
+  def most_popular_ride
+    
+  end
 end
