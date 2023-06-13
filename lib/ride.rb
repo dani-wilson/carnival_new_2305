@@ -19,9 +19,13 @@ class Ride
     if !visitor.preferences.include?(@excitement) || visitor.height < @min_height
       false
     else
-      @rider_log[visitor] = [visitor]
       visitor.spending_money = visitor.spending_money - @admission_fee
       @revenue += @admission_fee
+      if @rider_log.include?(visitor)
+        @rider_log[visitor] +=1
+      else
+        @rider_log[visitor] = 1
+      end
     end
   end
 
